@@ -1,5 +1,5 @@
 body {
-    background-image: url("./assets/images/background.jpg");
+    background-image: url("../.././assets/images/background.jpg");
 }
 
 h1 {
@@ -47,4 +47,21 @@ h1 {
 
 .images2 {
     margin-left: 10px;
+}
+
+#total-score-is {
+    background-color: #56B598;
+    color: white;
+    height: 40px;
+    padding-top: 15px;
+    margin-top: 10px;
+}
+
+#total-score-box {
+    background-color: #56B598;
+    color: white;
+    height: 100px;
+    padding-top: 15px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
