@@ -1,0 +1,50 @@
+body {
+    background-image: url("./assets/images/background.jpg");
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#crystal-collector {
+    background-color: #DB730C;
+    color: white;
+    height: 100px;
+    padding-top: 30px;
+}
+
+#rules-box {
+    line-height: 30px;
+    background-color: #F9C5E7;
+    color: green;
+    margin-top: 10px;
+    height: 300px;
+    padding-top: 40px;
+}
+
+#random-box {
+    background-color: #99FE9D;
+    color: #B224D5;
+    height: 100px;
+    margin-top: 10px;
+}
+
+#wins-loss-box {
+    background-color: #6CFEB5;
+    color: #0E0587;
+    height: 100px;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.images {
+    height: 150px;
+    width: 150px;
+    margin-top: 10px;
+}
+
+.images2 {
+    margin-left: 10px;
+}
