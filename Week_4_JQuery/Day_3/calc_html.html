@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button class = "number" value = "0">0</button>
+    <button class = "number" value = "1">1</button>
+    <button class = "number" value = "2">2</button>
+    <button class = "number" value = "3">3</button>
+    <button class = "number" value = "4">4</button>
+    <button class = "number" value = "5">5</button>
+    <button class = "number" value = "6">6</button>
+    <button class = "number" value = "7">7</button>
+    <button class = "number" value = "8">8</button>
+    <button class = "number" value = "9">9</button>
+    <button class = "operator" value = "+">+</button>
+    <button class = "operator" value = "-">-</button>
+    <button class = "operator" value = "*">*</button>    
+    <button class = "operator" value = "/">/</button>
+    
+
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script>
+        var add = function(num1, num2) {
+            return num1 + num2;
+        }
+        var minus = function(num1, num2) {
+            return num1 - num2;
+        }
+        var divide = function(num1, num2) {
+            return num1 / num2;
+        }
+        var multiply = function(num1, num2) {
+            return num1 * num2;
+        }
+        
+        $(".number").on("click", function() {
+            console.log($(this).attr('value'));
+        });
+
+        $(".operator").on("click", function() {
+            console.log($(this).attr('value'));
+        });
+    </script>
+    
+</body>
+</html>
