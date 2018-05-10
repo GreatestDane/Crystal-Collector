@@ -4,23 +4,59 @@ var wins = 0;
 var losses = 0;
 var totalScore = 0;
 var goalNumber = 0;
-var blue;
-var gold;
-var green;
-var purple;
+var blue = 0;
+var gold = 0;
+var green = 0;
+var purple = 0;
 
 
 //Declare your functions
-//Random Number function
+//Random Number for goal function
 function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) ) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 };
+
+//Random Number for Crystals function
+function crystalShuffle() {
+    blue = randomNumber(1, 12);
+    gold = randomNumber(1, 12);
+    green = randomNumber(1, 12);
+    purple = randomNumber(1, 12);
+}
 
 //Game reset function
 function gameReset() {
-    var gameOver = false;
+    gameOver = false;
+    totalScore = 0;
+    $("#total-score").text(totalScore);
+    goalNumber = randomNumber(19, 120);
+    $("#random-number").text(goalNumber);
+    crystalShuffle();
+    $("#blue").attr("value", blue);
+    $("#gold").attr("value", gold);
+    $("#green").attr("value", green);
+    $("#purple").attr("value", purple);
 }
 
+// Create the logic to win or lose the game
+function gameLogic() {
+
+    if (totalScore === goalNumber) {
+        wins += 1;
+        $("#wins").text(wins);
+        gameOver = true;
+    }
+
+    else if (totalScore > goalNumber) {
+        losses += 1;
+        $("#losses").text(losses);
+        gameOver = true;
+    };
+
+    if (gameOver === true) {
+        gameReset();
+    };
+};
 
 //Setup the first game
 
@@ -31,10 +67,7 @@ goalNumber = randomNumber(19, 120);
 $("#random-number").text(goalNumber);
 
 //Assign random values to the crystals
-blue = randomNumber(1, 12);
-gold = randomNumber(1, 12);
-green = randomNumber(1, 12);
-purple = randomNumber(1, 12);
+crystalShuffle();
 
 //Assign the HTML values
 $("#blue").attr("value", blue);
@@ -43,49 +76,29 @@ $("#green").attr("value", green);
 $("#purple").attr("value", purple);
 
 //Make it so when you click a crystal you start adding to your score
-$("#blue").on("click", function() {
+$("#blue").on("click", function () {
     totalScore += Number(($(this).attr('value')));
     $("#total-score").text(totalScore);
-    console.log(totalScore);
-    console.log(goalNumber);
+    gameLogic();
 });
 
-$("#gold").on("click", function() {
+$("#gold").on("click", function () {
     totalScore += Number(($(this).attr('value')));
     $("#total-score").text(totalScore);
-    console.log(totalScore);
-    console.log(goalNumber);
+    gameLogic();
 });
 
-$("#green").on("click", function() {
+$("#green").on("click", function () {
     totalScore += Number(($(this).attr('value')));
     $("#total-score").text(totalScore);
-    console.log(totalScore);
-    console.log(goalNumber);
+    gameLogic();
 });
-$("#purple").on("click", function() {
+
+$("#purple").on("click", function () {
     totalScore += Number(($(this).attr('value')));
     $("#total-score").text(totalScore);
-    console.log(totalScore);
-    console.log(goalNumber);
+    gameLogic();
 });
 
-// Create the logic to win or lose the game
-
-if (totalScore === goalNumber) {
-    wins += 1;
-    $("#wins").text(wins);
-    gameOver = true;
-};
-
-if (totalScore > goalNumber) {
-    losses += 1;
-    $("#losses").text(losses);
-    gameOver = true;
-};
-
-if (gameOver === true) {
-    gameReset();
-};
 
 
