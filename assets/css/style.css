@@ -12,6 +12,9 @@ h1 {
     color: white;
     height: 100px;
     padding-top: 30px;
+    border-style: outset;
+    border-color: white;
+    border-width: 5px;
 }
 
 #rules-box {
@@ -21,6 +24,9 @@ h1 {
     margin-top: 10px;
     height: 300px;
     padding-top: 40px;
+    border-style: outset;
+    border-color: white;
+    border-width: 5px;
 }
 
 #random-box {
@@ -28,6 +34,9 @@ h1 {
     color: #B224D5;
     height: 100px;
     margin-top: 10px;
+    border-style: outset;
+    border-color: white;
+    border-width: 5px;
 }
 
 #wins-loss-box {
@@ -37,12 +46,18 @@ h1 {
     line-height: 30px;
     margin-top: 10px;
     margin-left: 10px;
+    border-style: outset;
+    border-color: white;
+    border-width: 5px;
 }
 
 .images {
     height: 150px;
     width: 150px;
     margin-top: 10px;
+    border-style: outset;
+    border-color: white;
+    border-width: 5px;
 }
 
 .images2 {
@@ -55,6 +70,9 @@ h1 {
     height: 40px;
     padding-top: 15px;
     margin-top: 10px;
+    border-style: outset;
+    border-color: white;
+    border-width: 5px;
 }
 
 #total-score-box {
@@ -65,5 +83,8 @@ h1 {
     margin-top: 10px;
     margin-bottom: 30px;
     font-size: 30px;
+    border-style: outset;
+    border-color: white;
+    border-width: 5px;
 }
 
